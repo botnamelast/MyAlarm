@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.My.Alarm'
+    compileSdkVersion 33 
+    
+    defaultConfig {
+        applicationId "com.My.Alarm"
+        minSdkVersion 21
+        targetSdkVersion 33 
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Gunakan versi library yang lebih tua tapi sangat stabil
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+}
